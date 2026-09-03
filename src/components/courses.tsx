@@ -16,7 +16,7 @@ const item = {
     opacity: 1,
     transition: {
       duration: 1.4,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
@@ -82,7 +82,7 @@ export default function Courses() {
         {/* Courses */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-          {courses.map((course, index) => (
+          {courses.map((course) => (
             <motion.div
               key={course.title}
               variants={item}
